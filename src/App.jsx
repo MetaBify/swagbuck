@@ -199,7 +199,6 @@ function App() {
             alt="Swagbucks"
             className="logo"
           />
-          <span className="badge">Mobile-first promo</span>
         </header>
 
         <section className="card timer-bar">
@@ -221,7 +220,110 @@ function App() {
           </div>
         </section>
 
-        <section className="promo card promo-hero promo-attach-top">
+        <section className="hero card hero-boost hero-attach">
+          <p className="eyebrow">Swagbucks Download</p>
+          <h1 className="hero-title">
+            <span className="hero-accent">Download</span> and start earning today
+            with <span className="hero-accent-alt">Swagbucks</span>.
+          </h1>
+          <p className="subtext">
+            Swagbucks is a free rewards app where you do quick tasks, earn SB
+            points, and trade them for PayPal cash or gift cards.
+          </p>
+          <div className="cta-group">
+            {iosOffer ? (
+              <a
+                id="install"
+                className="cta primary"
+                href={iosOffer.url}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <span className="cta-os" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M16.6 3.6c-.9.8-2 1.1-3 .9-.1-1 .4-2 1.1-2.7.7-.7 1.8-1.1 2.7-1.1-.1 1-.4 1.9-.8 2.9z" />
+                    <path d="M12.1 6.1c1.3 0 2.3.7 3.1.7.8 0 1.4-.7 2.5-.7 1 0 2 .6 2.6 1.5-2.2 1.3-1.9 4.4.4 5.4-.4 1.1-1.2 2.2-1.9 3.1-.7.9-1.5 1.9-2.6 1.9-.7 0-1.2-.2-1.8-.4-.5-.2-1-.4-1.6-.4-.6 0-1.1.2-1.7.4-.6.2-1.1.4-1.8.4-1.2 0-2-1-2.7-2-1.3-1.9-2.3-5.2-.8-7.2.6-.8 1.6-1.6 2.9-1.6 1 0 2 .7 2.7.7z" />
+                  </svg>
+                </span>
+                <span className="cta-label">
+                  <span className="cta-download" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M12 3a1 1 0 011 1v8.59l2.3-2.3a1 1 0 111.4 1.42l-4.01 4.01a1 1 0 01-1.38 0l-4.01-4.01a1 1 0 111.4-1.42l2.3 2.3V4a1 1 0 011-1zm-7 14a1 1 0 011 1v2h12v-2a1 1 0 112 0v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-3a1 1 0 011-1z" />
+                    </svg>
+                  </span>
+                  Get on iPhone / iPad
+                </span>
+              </a>
+            ) : (
+              <button className="cta primary disabled" disabled>
+                <span className="cta-os" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M16.6 3.6c-.9.8-2 1.1-3 .9-.1-1 .4-2 1.1-2.7.7-.7 1.8-1.1 2.7-1.1-.1 1-.4 1.9-.8 2.9z" />
+                    <path d="M12.1 6.1c1.3 0 2.3.7 3.1.7.8 0 1.4-.7 2.5-.7 1 0 2 .6 2.6 1.5-2.2 1.3-1.9 4.4.4 5.4-.4 1.1-1.2 2.2-1.9 3.1-.7.9-1.5 1.9-2.6 1.9-.7 0-1.2-.2-1.8-.4-.5-.2-1-.4-1.6-.4-.6 0-1.1.2-1.7.4-.6.2-1.1.4-1.8.4-1.2 0-2-1-2.7-2-1.3-1.9-2.3-5.2-.8-7.2.6-.8 1.6-1.6 2.9-1.6 1 0 2 .7 2.7.7z" />
+                  </svg>
+                </span>
+                <span className="cta-label">
+                  <span className="cta-download" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M12 3a1 1 0 011 1v8.59l2.3-2.3a1 1 0 111.4 1.42l-4.01 4.01a1 1 0 01-1.38 0l-4.01-4.01a1 1 0 111.4-1.42l2.3 2.3V4a1 1 0 011-1zm-7 14a1 1 0 011 1v2h12v-2a1 1 0 112 0v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-3a1 1 0 011-1z" />
+                    </svg>
+                  </span>
+                  Get on iPhone / iPad
+                </span>
+              </button>
+            )}
+            {androidOffer ? (
+              <a
+                className="cta ghost"
+                href={androidOffer.url}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <span className="cta-os" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="5" y="7" width="14" height="11" rx="2.5" />
+                    <circle cx="9" cy="12" r="1" />
+                    <circle cx="15" cy="12" r="1" />
+                    <path d="M8 5l-1.5-1.5M16 5l1.5-1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+                  </svg>
+                </span>
+                <span className="cta-label">
+                  <span className="cta-download" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M12 3a1 1 0 011 1v8.59l2.3-2.3a1 1 0 111.4 1.42l-4.01 4.01a1 1 0 01-1.38 0l-4.01-4.01a1 1 0 111.4-1.42l2.3 2.3V4a1 1 0 011-1zm-7 14a1 1 0 011 1v2h12v-2a1 1 0 112 0v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-3a1 1 0 011-1z" />
+                    </svg>
+                  </span>
+                  Get on Android
+                </span>
+              </a>
+            ) : (
+              <button className="cta ghost disabled" disabled>
+                <span className="cta-os" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="5" y="7" width="14" height="11" rx="2.5" />
+                    <circle cx="9" cy="12" r="1" />
+                    <circle cx="15" cy="12" r="1" />
+                    <path d="M8 5l-1.5-1.5M16 5l1.5-1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+                  </svg>
+                </span>
+                <span className="cta-label">
+                  <span className="cta-download" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M12 3a1 1 0 011 1v8.59l2.3-2.3a1 1 0 111.4 1.42l-4.01 4.01a1 1 0 01-1.38 0l-4.01-4.01a1 1 0 111.4-1.42l2.3 2.3V4a1 1 0 011-1zm-7 14a1 1 0 011 1v2h12v-2a1 1 0 112 0v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-3a1 1 0 011-1z" />
+                    </svg>
+                  </span>
+                  Get on Android
+                </span>
+              </button>
+            )}
+          </div>
+          <p className="fineprint">
+            Offers are US-only. If the buttons are disabled, the offer is not
+            available for your location or device yet.
+          </p>
+        </section>
+
+        <section className="promo card promo-hero promo-slim">
           <div className="promo-top">
             <div>
               <p className="eyebrow">Limited promo</p>
@@ -237,49 +339,6 @@ function App() {
             <span className="divider">•</span>
             <span>Download quick</span>
           </div>
-        </section>
-
-        <section className="hero card hero-boost hero-attach">
-          <p className="eyebrow">Swagbucks Download</p>
-          <h1>Download and start earning today with Swagbucks.</h1>
-          <p className="subtext">
-            Swagbucks is a free rewards app where you do quick tasks, earn SB
-            points, and trade them for PayPal cash or gift cards.
-          </p>
-          <div className="cta-group">
-            {iosOffer ? (
-              <a
-                className="cta primary"
-                href={iosOffer.url}
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Get on iPhone / iPad
-              </a>
-            ) : (
-              <button className="cta primary disabled" disabled>
-                Get on iPhone / iPad
-              </button>
-            )}
-            {androidOffer ? (
-              <a
-                className="cta ghost"
-                href={androidOffer.url}
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Get on Android
-              </a>
-            ) : (
-              <button className="cta ghost disabled" disabled>
-                Get on Android
-              </button>
-            )}
-          </div>
-          <p className="fineprint">
-            Offers are US-only. If the buttons are disabled, the offer is not
-            available for your location or device yet.
-          </p>
         </section>
 
         <section className="card reviews">
@@ -375,9 +434,10 @@ function App() {
           </div>
         </section>
 
-        <footer className="footer">
-          <p>Swipe-friendly - Light blue - Rounded - Simple</p>
-        </footer>
+        <a href="#install" className="sticky-install" aria-label="Install now">
+          Install now
+        </a>
+
       </main>
     </div>
   )
