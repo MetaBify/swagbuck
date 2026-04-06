@@ -308,6 +308,8 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   border: none;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
 .cta.primary {
@@ -321,6 +323,32 @@
   background: rgba(255, 255, 255, 0.9);
   color: #1f5a9f;
   border: 1px solid rgba(27, 85, 150, 0.18);
+}
+
+.cta:not(.disabled)::after {
+  content: '';
+  position: absolute;
+  inset: -40% 0;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.6) 45%,
+    rgba(255, 255, 255, 0.2) 55%,
+    transparent 100%
+  );
+  transform: translateX(-120%);
+  animation: sheen 4.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.cta.ghost:not(.disabled)::after {
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(106, 92, 255, 0.35) 45%,
+    rgba(79, 167, 255, 0.2) 55%,
+    transparent 100%
+  );
 }
 
 @media (hover: hover) {
@@ -753,6 +781,18 @@
   }
 }
 
+@keyframes sheen {
+  0% {
+    transform: translateX(-120%);
+  }
+  40% {
+    transform: translateX(120%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+
 @keyframes pattern-drift {
   0% {
     background-position: 0 0, 80px 120px;
@@ -775,6 +815,7 @@
   .orb,
   .phone-shell > *,
   .cta.primary,
+  .cta:not(.disabled)::after,
   .hero-boost::after,
   .carousel-track.auto,
   .page::before {
