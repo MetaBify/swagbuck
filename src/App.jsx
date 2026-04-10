@@ -438,6 +438,10 @@ function App() {
           Install now
         </a>
 
+        <div className="legal">
+          <a href="/privacy.html">Privacy Policy</a>
+        </div>
+
       </main>
     </div>
   )
